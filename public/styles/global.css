@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* Remove as bordas dos elementos (botôes e inputs) */
+  box-sizing: border-box;
+}
+
+:root {
+  --linear: linear-gradient(
+    195.96deg,
+    #5498ff -122.01%,
+    #428eff -8.36%,
+    #297fff 98.4%
+  );
+  --black: #0d114f;
+  --white: #fafafa;
+  --red: #e83f5b;
+  --light-blue: #e0ecff;
+  --blue: #3485ff;
+  --background: #fbfcff;
+  --overlay: #040911;
+  --icons-details: #a5b0c1;
+
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-light: #e5eaf1;
+
+  /* --body-font: 'Open Sans', sans-serif; */
+
+  --title-font: 1.75rem 'Poppins', sans-serif;
+  --subtitle-font: 1.75rem 'Poppins', sans-serif;
+  --paragraph-font: 0.875rem 'Open Sans', sans-serif;
+  --button-font: 1rem 'Poppins', sans-serif;
+  --input-font: 1rem 'Open Sans', sans-serif;
+}
+
+body {
+  /* remove as rolagens da tela */
+  display: flex;
+  height: 100vh;
+  background: var(--background);
+}
+
+body,
+button,
+input,
+textarea {
+  outline: none;
+  font-family: var(--body-font);
+  font-size: clamp(0.875rem, 1rem, 2vw);
+}
+
+input,
+button,
+.button {
+  border-radius: 8px;
+}
+
+button,
+.button {
+  cursor: pointer;
+  font: var(--button-font);
+
+  color: var(--white);
+  background-color: var(--blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: filter 0.2s;
+}
+
+button.outline,
+.button.outline {
+  border: solid;
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+button.red,
+.button.red {
+  background-color: var(--red);
+}
+
+button.grey,
+.button.grey {
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(1.2);
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Header */
+
+header {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
